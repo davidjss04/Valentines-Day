@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Share from "./Share";
 
 export default function Page() {
     const [noCount, setNoCount] = useState(0);
@@ -34,8 +35,9 @@ export default function Page() {
     };
 
     return (
-        <div className="
-        flex items-center justify-center min-h-screen
+        <div
+            className="
+        flex flex-col items-center justify-center min-h-screen
         "
         >
             <div
@@ -79,6 +81,26 @@ export default function Page() {
                         </div>
                     </>
                 )}
+            </div>
+            <div
+                className="
+            flex flex-col items-center justify-center my-4
+            "
+            >
+                <Share />
+                <p
+                    className="
+                text-xs text-gray-400
+                "
+                >
+                    Hecho con ❤ por{" "}
+                    <a
+                        className="text-blue-500"
+                        href="https://www.davidjss.dev"
+                    >
+                        David Huaricancha
+                    </a>
+                </p>
             </div>
         </div>
     );
